@@ -4,10 +4,7 @@ namespace Estudo_Csharp
 {
     class Estudo_Param
     {
-        static void estudo()
-        {
-           
-        }
+        
         public static void Somatoria(params int[] n) // criando um metodo somatoria com parametros de array com valores inteiros e nome = n
         {
             int res = 0;
