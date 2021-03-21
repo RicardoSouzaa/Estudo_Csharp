@@ -15,6 +15,27 @@ namespace Estudo_Csharp
             Console.Clear();
         }
 
+        static void Voltar()
+        {
+            char v;
+            Console.WriteLine("Voltar? (s/n)");
+            v = Console.ReadKey().KeyChar;
+            switch (char.ToLower(v))
+            {
+                case 's':
+                    Limpar();
+                    goto Inicio;
+
+                case 'n':
+                    goto Fim;
+
+                default:
+                    Limpar();
+                    Console.WriteLine("Escolha (S)Sim ou (N)Não");
+                    goto Estudo_orientacao_obj;
+            }
+        }
+
         static void Main(string[] args)
         {
 
@@ -80,7 +101,9 @@ namespace Estudo_Csharp
             p1.Nome = "Milton Neves";
             Console.WriteLine($"{p1.Nome} possui: \n\t{p1.Bracos} braços \n\t{p1.Pernas} pernas \n\t{p1.Olhos} olhos \n\tcor do cabelo:{p1.CorCabelo}");
             Console.ReadKey();
+            Voltar();
 
+            /* 
             Console.WriteLine("Voltar? (s/n)");
             voltar = Console.ReadKey().KeyChar;
             switch (char.ToLower(voltar))
@@ -97,6 +120,7 @@ namespace Estudo_Csharp
                     Console.WriteLine("Escolha (S)Sim ou (N)Não");
                     goto Estudo_orientacao_obj;
             }
+            */
         Fim:
             Console.WriteLine("\n\nObrigado");
             Console.ReadLine();
