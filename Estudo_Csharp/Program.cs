@@ -17,7 +17,7 @@ namespace Estudo_Csharp
 
         static void Main(string[] args)
         {
-        
+
         Inicio:
 
             char escolhas;
@@ -27,7 +27,7 @@ namespace Estudo_Csharp
             Console.WriteLine("\n\t 1) Estudo do metodo parametro (somatória) \n\t 2) Estudo de Orientação a obj. \n\t 3) Sair");
             escolhas = Console.ReadKey().KeyChar;
             EscolhaEstudo(escolhas);
-            
+
             switch (escolhas)
             {
                 case '1':
@@ -46,7 +46,8 @@ namespace Estudo_Csharp
         Estudo_Param:
 
             Estudo_Param.Somatoria(200, 100, 10, 27, 88, 9, 16);
-            Console.ReadLine();
+            Console.ReadKey();
+            
             Console.WriteLine("Voltar? (s/n)");
             voltar = Console.ReadKey().KeyChar;
 
@@ -78,7 +79,10 @@ namespace Estudo_Csharp
             Pessoa p1 = new Pessoa("Loiro");
             p1.Nome = "Milton Neves";
             Console.WriteLine($"{p1.Nome} possui: \n\t{p1.Bracos} braços \n\t{p1.Pernas} pernas \n\t{p1.Olhos} olhos \n\tcor do cabelo:{p1.CorCabelo}");
+            Console.ReadKey();
 
+            Console.WriteLine("Voltar? (s/n)");
+            voltar = Console.ReadKey().KeyChar;
             switch (char.ToLower(voltar))
             {
                 case 's':
