@@ -4,10 +4,6 @@ namespace Estudo_Csharp
 {
     class Estudo_Param
     {
-        static void estudo()
-        {
-           
-        }
         public static void Somatoria(params int[] n) // criando um metodo somatoria com parametros de array com valores inteiros e nome = n
         {
             int res = 0;
@@ -21,7 +17,7 @@ namespace Estudo_Csharp
             }
             else
             {
-                for (int i=0; i < n.Length; i++)
+                for (int i = 0; i < n.Length; i++)
                 {
                     res += n[i]; // res vai receber o incremento do valor de i (0+i=0), (0+i=1), (1+i) etc.. 
                 }
