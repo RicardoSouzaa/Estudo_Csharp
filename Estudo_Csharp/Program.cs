@@ -4,18 +4,19 @@ namespace Estudo_Csharp
 {
     class Program
     {
-        static void EscolhaEstudo(params int[] escolhas)
+        /*static void EscolhaEstudo(params int[] escolhas)
         {
             int i = 0;
             escolhas[i] = i;
 
         }
+        */
         static void Limpar()
         {
             Console.Clear();
         }
 
-        static void Voltar()
+        /*static void Voltar()
         {
             char v;
             Console.WriteLine("Voltar? (s/n)");
@@ -35,7 +36,7 @@ namespace Estudo_Csharp
                     goto Estudo_orientacao_obj;
             }
         }
-
+        */
         static void Main(string[] args)
         {
 
@@ -47,7 +48,7 @@ namespace Estudo_Csharp
             Console.WriteLine("Qual estudo você deseja rodar?");
             Console.WriteLine("\n\t 1) Estudo do metodo parametro (somatória) \n\t 2) Estudo de Orientação a obj. \n\t 3) Sair");
             escolhas = Console.ReadKey().KeyChar;
-            EscolhaEstudo(escolhas);
+            //EscolhaEstudo(escolhas);
 
             switch (escolhas)
             {
@@ -101,7 +102,7 @@ namespace Estudo_Csharp
             p1.Nome = "Milton Neves";
             Console.WriteLine($"{p1.Nome} possui: \n\t{p1.Bracos} braços \n\t{p1.Pernas} pernas \n\t{p1.Olhos} olhos \n\tcor do cabelo:{p1.CorCabelo}");
             Console.ReadKey();
-            Voltar();
+            //Voltar();
 
             /* 
             Console.WriteLine("Voltar? (s/n)");
