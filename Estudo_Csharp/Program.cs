@@ -4,19 +4,12 @@ namespace Estudo_Csharp
 {
     class Program
     {
-        /*static void EscolhaEstudo(params int[] escolhas)
-        {
-            int i = 0;
-            escolhas[i] = i;
-
-        }
-        */
-        static void Limpar()
+        public static void Limpar()
         {
             Console.Clear();
         }
 
-        /*static void Voltar()
+        public static void Voltar()
         {
             char v;
             Console.WriteLine("Voltar? (s/n)");
@@ -25,25 +18,28 @@ namespace Estudo_Csharp
             {
                 case 's':
                     Limpar();
-                    goto Inicio;
-
+                    Inicio();
+                    break;
                 case 'n':
-                    goto Fim;
-
+                    Fim();
+                    break;
                 default:
                     Limpar();
                     Console.WriteLine("Escolha (S)Sim ou (N)Não");
-                    goto Estudo_orientacao_obj;
+                    Voltar();
+                    break;
             }
         }
-        */
+
         static void Main(string[] args)
         {
+            Inicio();
+        }
 
-        Inicio:
 
+        static void Inicio()
+        {
             char escolhas;
-            char voltar;
 
             Console.WriteLine("Qual estudo você deseja rodar?");
             Console.WriteLine("\n\t 1) Estudo do metodo parametro (somatória) \n\t 2) Estudo de Orientação a obj. \n\t 3) Sair");
@@ -54,42 +50,29 @@ namespace Estudo_Csharp
             {
                 case '1':
                     Limpar();
-                    goto Estudo_Param;
+                    EStudoParam();
+                    break;
 
                 case '2':
                     Limpar();
-                    goto Estudo_orientacao_obj;
+                    Estudo_Orientacao_Obj();
+                    break;
 
                 default:
                     Limpar();
-                    goto Fim;
+                    Fim();
+                    break;
             }
-
-        Estudo_Param:
-
+        }
+        static void EStudoParam()
+        {
             Estudo_Param.Somatoria(200, 100, 10, 27, 88, 9, 16);
             Console.ReadKey();
-            
-            Console.WriteLine("Voltar? (s/n)");
-            voltar = Console.ReadKey().KeyChar;
+            Voltar();
+        }
 
-            switch (char.ToLower(voltar))
-            {
-                case 's':
-                    Limpar();
-                    goto Inicio;
-
-                case 'n':
-                    goto Fim;
-
-                default:
-                    Limpar();
-                    Console.WriteLine("Escolha (S)Sim ou (N)Não");
-                    goto Estudo_Param;
-            }
-
-        Estudo_orientacao_obj:
-
+        static void Estudo_Orientacao_Obj()
+        {
             Pessoa p = new Pessoa();
             p.Nome = "Arnaldo Antunes";
             p.Bracos = 2;
@@ -102,30 +85,14 @@ namespace Estudo_Csharp
             p1.Nome = "Milton Neves";
             Console.WriteLine($"{p1.Nome} possui: \n\t{p1.Bracos} braços \n\t{p1.Pernas} pernas \n\t{p1.Olhos} olhos \n\tcor do cabelo:{p1.CorCabelo}");
             Console.ReadKey();
-            //Voltar();
-
-            /* 
-            Console.WriteLine("Voltar? (s/n)");
-            voltar = Console.ReadKey().KeyChar;
-            switch (char.ToLower(voltar))
-            {
-                case 's':
-                    Limpar();
-                    goto Inicio;
-
-                case 'n':
-                    goto Fim;
-
-                default:
-                    Limpar();
-                    Console.WriteLine("Escolha (S)Sim ou (N)Não");
-                    goto Estudo_orientacao_obj;
-            }
-            */
-        Fim:
+            Voltar();
+        }
+        static void Fim()
+        {
             Console.WriteLine("\n\nObrigado");
             Console.ReadLine();
         }
-    }
-}
 
+    }
+     
+}
