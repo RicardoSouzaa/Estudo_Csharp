@@ -42,9 +42,14 @@ namespace Estudo_Csharp
             char escolhas;
 
             Console.WriteLine("Qual estudo você deseja rodar?");
-            Console.WriteLine("\n\t 1) Estudo do metodo parametro (somatória) \n\t 2) Estudo de Orientação a obj. \n\t 3) Sair");
+            Console.WriteLine
+            (
+                "\n\t 1) Estudo do metodo parametro (somatória) " +
+                "\n\t 2) Estudo de Orientação a obj. " +
+                "\n\t 3) Sair"
+            );
+
             escolhas = Console.ReadKey().KeyChar;
-            //EscolhaEstudo(escolhas);
 
             switch (escolhas)
             {
@@ -94,5 +99,5 @@ namespace Estudo_Csharp
         }
 
     }
-     
+
 }
