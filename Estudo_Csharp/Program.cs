@@ -9,10 +9,16 @@ namespace Estudo_Csharp
             Console.Clear();
         }
 
+        public static void Fim()
+        {
+            Console.WriteLine("\n\nObrigado");
+            Console.ReadLine();
+        }
+
         public static void Voltar()
         {
             char v;
-            Console.WriteLine("Voltar? (s/n)");
+            Console.WriteLine("Voltar para o menu principal? (s/n)");
             v = Console.ReadKey().KeyChar;
             switch (char.ToLower(v))
             {
@@ -46,7 +52,8 @@ namespace Estudo_Csharp
             (
                 "\n\t 1) Estudo do metodo parametro (somatória) " +
                 "\n\t 2) Estudo de Orientação a obj. " +
-                "\n\t 3) Sair"
+                "\n\t 3) Estudo de if e else (Jogo de dados)" +
+                "\n\t 4) Sair"
             );
 
             escolhas = Console.ReadKey().KeyChar;
@@ -61,6 +68,16 @@ namespace Estudo_Csharp
                 case '2':
                     Limpar();
                     Estudo_Orientacao_Obj();
+                    break;
+
+                case '3':
+                    Limpar();
+                    Jogo_dados.JogodeDados();
+                    break;
+                
+                case '4':
+                    Limpar();
+                    Fim();
                     break;
 
                 default:
@@ -92,11 +109,7 @@ namespace Estudo_Csharp
             Console.ReadKey();
             Voltar();
         }
-        static void Fim()
-        {
-            Console.WriteLine("\n\nObrigado");
-            Console.ReadLine();
-        }
+        
 
     }
 
