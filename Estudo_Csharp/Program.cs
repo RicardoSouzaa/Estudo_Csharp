@@ -52,8 +52,9 @@ namespace Estudo_Csharp
             (
                 "\n\t 1) Estudo do metodo parametro (somatória) " +
                 "\n\t 2) Estudo de Orientação a obj. " +
-                "\n\t 3) Estudo de if e else (Jogo de dados)" +
-                "\n\t 4) Sair"
+                "\n\t 3) Estudo de if e else (Jogo de dados) " +
+                "\n\t 4) Estudo de Foreach e Arrays (Itens no armazém)" +
+                "\n\t 5) Sair"
             );
 
             escolhas = Console.ReadKey().KeyChar;
@@ -76,6 +77,11 @@ namespace Estudo_Csharp
                     break;
                 
                 case '4':
+                    Limpar();
+                    Armazem_estudo.Armazem();
+                    break;
+
+                case '5':
                     Limpar();
                     Fim();
                     break;
