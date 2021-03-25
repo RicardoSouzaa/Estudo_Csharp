@@ -43,7 +43,4 @@ namespace Estudo_Csharp
 
         }
     }
-
-
-
 }

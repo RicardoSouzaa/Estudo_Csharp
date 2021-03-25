@@ -26,9 +26,11 @@ namespace Estudo_Csharp
                     Limpar();
                     Inicio();
                     break;
+
                 case 'n':
                     Fim();
                     break;
+
                 default:
                     Limpar();
                     Console.WriteLine("Escolha (S)Sim ou (N)Não");
@@ -41,7 +43,6 @@ namespace Estudo_Csharp
         {
             Inicio();
         }
-
 
         static void Inicio()
         {
@@ -75,7 +76,7 @@ namespace Estudo_Csharp
                     Limpar();
                     Jogo_dados.JogodeDados();
                     break;
-                
+
                 case '4':
                     Limpar();
                     Armazem_estudo.Armazem();
@@ -115,8 +116,5 @@ namespace Estudo_Csharp
             Console.ReadKey();
             Voltar();
         }
-        
-
     }
-
 }
