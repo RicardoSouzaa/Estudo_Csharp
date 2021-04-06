@@ -143,7 +143,9 @@ namespace Estudo_Csharp
             Console.WriteLine($"Qtd. de rodas...: {cc1.getRodas()}");
             Console.WriteLine($"Velo. Maxima....: {cc1.velMax} Km/h");
             Console.WriteLine($"Carro ligado?...: {cc1.getLigado()}");
+            Console.WriteLine($"Qtd de munição:.: {cc1.municao}");
             Console.ReadLine();
+            Voltar();
         }
 
     }
