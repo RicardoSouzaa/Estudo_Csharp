@@ -54,8 +54,9 @@ namespace Estudo_Csharp
                 "\n\t 1) Estudo do metodo parametro (somatória) " +
                 "\n\t 2) Estudo de Orientação a obj. " +
                 "\n\t 3) Estudo de if e else (Jogo de dados) " +
-                "\n\t 4) Estudo de Foreach e Arrays (Itens no armazém)" +
-                "\n\t 5) Sair"
+                "\n\t 4) Estudo de Foreach e Arrays (Itens no armazém) " +
+                "\n\t 5) Estudo de Heranças de classes (Veículos/carros)" +
+                "\n\t 6) Sair"
             );
 
             escolhas = Console.ReadKey().KeyChar;
@@ -81,8 +82,13 @@ namespace Estudo_Csharp
                     Limpar();
                     Armazem_estudo.Armazem();
                     break;
-
+                
                 case '5':
+                    Limpar();
+                    Estudo_heraca();
+                    break;
+
+                case '6':
                     Limpar();
                     Fim();
                     break;
@@ -116,5 +122,29 @@ namespace Estudo_Csharp
             Console.ReadKey();
             Voltar();
         }
+
+        static void Estudo_heraca()
+        {
+            Carro c1 = new Carro("rapidão", "Vermelho");
+            
+            Console.WriteLine($"Nome do carro...: {c1.nome}");
+            Console.WriteLine($"Cor do carro....: {c1.cor}");
+            Console.WriteLine($"Qtd. de rodas...: {c1.getRodas()}");
+            Console.WriteLine($"Velo. Maxima....: {c1.velMax} Km/h");
+            Console.WriteLine($"Carro ligado?...: {c1.getLigado()}");
+            
+            
+            CarroCombate cc1 = new CarroCombate();
+
+            cc1.Desligar();
+            cc1.velMax = 60;
+            Console.WriteLine($"\n\n\nNome do carro...: {cc1.nome}");
+            Console.WriteLine($"Cor do carro....: {cc1.cor}");
+            Console.WriteLine($"Qtd. de rodas...: {cc1.getRodas()}");
+            Console.WriteLine($"Velo. Maxima....: {cc1.velMax} Km/h");
+            Console.WriteLine($"Carro ligado?...: {cc1.getLigado()}");
+            Console.ReadLine();
+        }
+
     }
 }
