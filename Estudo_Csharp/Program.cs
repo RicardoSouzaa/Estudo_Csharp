@@ -57,7 +57,8 @@ namespace Estudo_Csharp
                 "\n\t 4) Estudo de Foreach e Arrays (Itens no armazém) " +
                 "\n\t 5) Estudo de Heranças de classes (Veículos/carros)" +
                 "\n\t 6) Estudo de Recursividade (chamar a função dentro da mesma)" +
-                "\n\t 7) Sair"
+                "\n\t 7) Estudo de Uso de delegate para chamar metodos static" +
+                "\n\t 8) Sair"
             );
 
             escolhas = Console.ReadKey().KeyChar;
@@ -96,12 +97,19 @@ namespace Estudo_Csharp
 
                 case '7':
                     Limpar();
+                    Est_delegate.estDelegate();
+                    break;
+
+                case '8':
+                    Limpar();
                     Fim();
                     break;
 
                 default:
                     Limpar();
-                    Fim();
+                    Console.WriteLine("Escolha uma opçao válida");
+                    Console.ReadLine();
+                    Inicio();
                     break;
             }
         }
