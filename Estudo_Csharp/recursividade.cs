@@ -5,9 +5,9 @@ namespace Estudo_Csharp
     {
         //recursividade é utilizado para chamar a função dentro dela mesmo, definindo um fim.
 
-        static public int fat(int n)  // método de recursividade
+        static public ulong fat(ulong n)  // método de recursividade
         {
-            int res;
+            ulong res;
             if (n <= 1)
             {
                 res = 1;
@@ -19,13 +19,13 @@ namespace Estudo_Csharp
             return res;
         }
 
-        static public void calc() // Método para fatorar o número escolhido
+        static public void calc() // Método para fatorar o número escolhido maximo suportado e 65!
         {
-            int resultado;
-            int escolha;
+            ulong resultado;
+            ulong escolha;
 
             Console.WriteLine("Escolha o numero que deseja fatorar. Ex 5!");
-            escolha = int.Parse(Console.ReadLine());
+            escolha = ulong.Parse(Console.ReadLine());
 
             resultado = fat(escolha);
             Console.WriteLine(resultado);
