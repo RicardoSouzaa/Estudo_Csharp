@@ -56,7 +56,8 @@ namespace Estudo_Csharp
                 "\n\t 3) Estudo de if e else (Jogo de dados) " +
                 "\n\t 4) Estudo de Foreach e Arrays (Itens no armazém) " +
                 "\n\t 5) Estudo de Heranças de classes (Veículos/carros)" +
-                "\n\t 6) Sair"
+                "\n\t 6) Estudo de Recursividade (chamar a função dentro da mesma)" +
+                "\n\t 7) Sair"
             );
 
             escolhas = Console.ReadKey().KeyChar;
@@ -89,6 +90,11 @@ namespace Estudo_Csharp
                     break;
 
                 case '6':
+                    Limpar();
+                    recursividade.calc();
+                    break;
+
+                case '7':
                     Limpar();
                     Fim();
                     break;
